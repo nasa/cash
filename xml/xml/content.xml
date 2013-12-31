@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+<!-- The previous two lines are required. -->
+
+
+<navbar>
+    <!--
+    <navbar_links> defines the contents for the global navigation bar. You can
+    add as many links as you want. They will be displayed in the order they are
+    listed here.
+    Entries follow the following formatting
+       <li url="http(s)://someurl">Text-to-display</li>
+    An example has been created for you.
+    -->
+    <img src="resources/images/JPL_Logo.png" height="43px"/>
+    <li url="http://jpl.nasa.gov">JPL Homepage</li>
+    <li url="http://dictionary.reference.com/browse/configurable">These links are configurable</li>
+</navbar>
+
+
+<header>
+    <!--
+    <header> defines the contents for the webpage header.
+    The page title goes in here, as well as the title you want displayed on the
+    webpage. For those not familiar with HTML, note that the 'page title' is the
+    text that shows up in the tab/window bar, not inside the html page. To
+    declare a title inside the html page, use the appropriate html heading tag.
+    The page title is declared as follows:
+        <title>Page Title</title>
+    To specify the title you want displayed on the webpage, you can do something
+    like this:
+        <h2 style="underlined">My Team's Title</h2>
+    You can use any html heading you prefer (h1, h2, h3, etc.). Notice the
+    'style' attribute. You can have multiple style specifications in this
+    attribute. The following would be an equally valid heading declaration:
+        <h1 style="bold, italic, underline">My Team's Title</h1>
+    If you would prefer to have an image as your team's name/title, you may do
+    so by using the following tag:
+        <img src="path/to/image/file.extension" />
+    -->
+	<title>Page Title</title>
+    <h2 style="underlined">My Team's Title</h2>
+</header>
+
+<navigation>
+    <!--
+    This xml tag defines the contents for the navigation column. The column's
+    title is defined by the <title> xml tag. This <title> tag has an optional
+    'heading' attribute that can be set to any standard html heading (h1, h2,
+    h3, h4, etc.). If not specified, it should default to h3.
+    To modify the items in the navigation list, simply modify the unordered
+    list. Note that this list is hierarchical. Following is an example of a
+    properly structured list.
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2
+                <ul>
+                    <li>Item 2.A</li>
+                    <li>Item 2.B</li>
+                </ul>
+            </li>
+            <li>Item 3</li>
+        </ul>
+    -->
+    <sidebar_title heading="h4">Sidebar Title</sidebar_title>
+    <ul>
+        <li>Getting Started
+            <ul>
+                <li url="ic/template.xml">Inner Content Template</li>
+            </ul>
+        </li>
+        <li>Tips
+            <ul>
+                <li url="http://jpl.nasa.gov">External links open in new tabs</li>
+                <li url="ic/template.xml">Internal links open in the content window</li>
+            </ul>
+        </li>
+    </ul>
+</navigation>
+
+</document>

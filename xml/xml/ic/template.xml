@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+<!-- The previous two lines are required. -->
+
+<content>
+    <!--
+    Everything you want displayed in the inner pane must be declared under this
+    <content> tag. You can use any of the tags you've seen in other xml files
+    for this framework. You can also use many standard html tags.
+    -->
+    <h1 css_embed="text-align: center">Inner Content Template XML File</h1>
+    <p>You will find the source xml for this file in
+        'ic/template.xml'.</p>
+    <h2>&amp;lt;h2&amp;gt;You can use standard&amp;lt;/h2&amp;gt;</h2>
+    <h3>&amp;lt;h3&amp;gt;html heading tags&amp;lt;/h3&amp;gt;</h3>
+    <h4>&amp;lt;h4&amp;gt;to specify how you want&amp;lt;/h3&amp;gt;</h4>
+    <h5>&amp;lt;h5&amp;gt;title text to show up.&amp;lt;/h5&amp;gt;</h5>
+    <p>Now let's begin an unordered list</p>
+    <ul>
+        <li>Lists are structured just like they are in html</li>
+        <li>With this framework, you can choose to hide content from certain
+            users</li>
+        <li>To illlustrate this, examine the following line(s)
+            <ul>
+                <li security="top_secret">
+                    Only members with 'top_secret' security clearance can see
+                    this line.
+                </li>
+                <li security="secret">
+                    Members with either 'top_secret' or 'secret' security
+                    clearance can see this line.
+                </li>
+            </ul>
+        </li>
+        <li security="top_secret">
+            Entire lists can be hidden through the use of inheritance. This one
+            is set to be viewable by top_secret members only
+            <ul>
+                <li>This list item does not have any security requirements
+                    specified. It is instead inheriting from its parent</li>
+            </ul>
+        </li>
+    </ul>
+    <h2>Features Include:</h2>
+    <ul>
+        <li style="bold, italic, underline">Build in bold, italic, and underline using the 'style' attribute</li>
+        <li css_embed="color:blue;font-family:'Courier New'">You can embed css styles</li>
+        <li>If you want, you can even attach an entire css class to any given xml tag</li>
+        <li url="http://jpl.nasa.gov">Simple hyperlinks via the 'url' attribute</li>
+        <li>Inline <link url="http://jpl.nasa.gov">hyperlinks</link> via the
+            <link url="http://en.wikipedia.org/wiki/Link_(The_Legend_of_Zelda)">link</link> tag
+        </li>
+        <li>Note that you can force links to open in either a
+            <link url="http://jpl.nasa.gov" target="new_tab">new_tab</link>
+            or in the <link url="http://jpl.nasa.gov" target="same_tab">same_tab</link>
+        </li>
+    </ul>
+    <img url="http://jpl.nasa.gov" target="same_tab" src="resources/images/nasa-logo.png" width="250px" height="auto"/>
+    <h3>Tables:</h3>
+    <table>
+        <row>
+            <col_title>Column 1</col_title>
+            <col_title style="bold, italic">Column 2 (boldened and italicized)</col_title>
+            <col_title css_embed="color:orange">Column 3 (orange)</col_title>
+        </row>
+        <row>
+            <cell css_embed="color:blue">Data 1.a (blue)</cell>
+            <cell style="underlined">Data 2.a (underlined)</cell>
+            <cell>Data 3.a</cell>
+        </row>
+        <row>
+            <cell>Data 1.b</cell>
+            <cell url="http://jpl.nasa.gov" target="same_tab">Data 2.b (hyperlinked)</cell>
+            <cell>Data 3.b</cell>
+        </row>
+    </table>
+    <h3>Multiple Columns:</h3>
+    <column>
+        <h5>Column 1</h5>
+        <p>Every column is considered a separate content section from every
+            other column</p>
+    </column>
+    <column>
+        <h5>Column 2</h5>
+        <p>
+            You can have as many columns as you want, though it's doubtful
+            you'll find a use for any more than 10
+        </p>
+    </column>
+    <column>
+        <h5>Column 3</h5>
+        <p>And the third</p>
+    </column>
+    <column>
+        <h5>Column 4</h5>
+        <p>And the fourth</p>
+    </column>
+</content>
+
+</document>

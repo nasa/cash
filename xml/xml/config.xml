@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+<!-- These first two lines are required. -->
+
+    <!--
+    <access_config> defines all configuration options for security clearance
+    and path-based content hiding
+    -->
+    <access_config>
+
+        <!--
+        Defines an Access Control List with a 'name' and any number of 'group's.
+        In order for these ACL declarations to be effective, their group names
+        must match those that exist on the LDAP server. If you are opting not to
+        use an LDAP server, none of the content that references these ACLs will
+        be visible
+        -->
+        <acl>
+            <name>top_secret</name>
+
+            <!-- Group name(s) must correspond to group name on LDAP Server -->
+            <group>group_a</group>
+        </acl>
+
+
+        <acl>
+            <name>secret</name>
+
+            <!-- Group name(s) must correspond to group name on LDAP Server -->
+            <group>group_a</group>
+            <group>group_b</group>
+        </acl>
+
+
+        
+        <!--
+        Defines a restricted directory with a 'path' and an 'acl_name'. The
+        'acl_name' corresponds to the ACLs defined previously in this document.
+        -->
+        <restricted_directory>
+            <path>/www/team_name/top_secret_folder</path>
+            <acl_name>top_secret</acl_name>
+        </restricted_directory>
+        <restricted_directory>
+            <path>/www/team_name/secret_folder</path>
+            <acl_name>secret</acl_name>
+        </restricted_directory>
+
+    </access_config>
+
+
+
+    <!--
+    <site_config> contains all content-based configurations for the team
+    website.
+    -->
+    <site_config>
+
+        <!-- Specifies the html file to display on the team's homepage -->
+        <start_page>start.html</start_page>
+
+        <!-- Specifies which xml file to use as the main content source -->
+        <main_content>content.xml</main_content>
+
+        <!-- Declares which security ACL to apply when none are specified -->
+        <default_security>public</default_security>
+
+        <!-- Specifies the parent domain name -->
+        <domain_name>project.domain.name</domain_name>
+
+    </site_config>
+
+
+
+    <!-- <ldap_config> contains all ldap server connectivity configurations -->
+    <ldap_config>
+        <address>ldap.domain.address</address>
+        <port>123</port>
+        <organizational_unit1>Organizational Unit 1</organizational_unit1>
+        <organizational_unit2>Organizational Unit 2</organizational_unit2>
+        <organization>Some Organization</organization>
+        <country_naming>US</country_naming>
+        <attribute>uniqueMember</attribute>
+        <use_ldap>false</use_ldap>
+        <default_security_in_ldap_absence>
+            public
+        </default_security_in_ldap_absence>
+    </ldap_config>
+
+<!-- This last line is required. -->
+</document>
+
